@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class NewClass2 {
+    public static void main(String[] args) {
+        int N;
+        try (Scanner scanner = new Scanner(System.in)) {
+            do {
+                System.out.print("Nhập N (N >= 10): ");
+                N = scanner.nextInt();
+                if (N < 10) {
+                    System.out.println("Giá trị không hợp lệ! Vui lòng nhập lại.");
+                }
+            } while (N < 10);
+        }
+        
+        int total = 0;
+        for (int i = 1; i <= N; i++) {
+            int num = Integer.parseInt(i + "" + i);
+            total += num;
+        }
+        
+        System.out.println("Tổng S = " + total);
+    }
+}
